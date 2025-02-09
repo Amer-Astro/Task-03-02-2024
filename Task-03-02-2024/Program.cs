@@ -52,6 +52,7 @@ public class Program
         AccountUtil.Withdraw(trustAccounts, 2000);
         AccountUtil.Withdraw(trustAccounts, 3000);
         AccountUtil.Withdraw(trustAccounts, 500);
+        AccountUtil.Withdraw(trustAccounts, 500);
 
         Console.WriteLine();
     }
