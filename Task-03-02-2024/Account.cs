@@ -32,6 +32,9 @@ namespace Task_03_02_2024
             return false;
         }
 
-
+        public override string ToString()
+        {
+            return $"Name: {Name}, Balance: {Balance}";
+        }
     }
 }
