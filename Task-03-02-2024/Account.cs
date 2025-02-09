@@ -36,5 +36,10 @@ namespace Task_03_02_2024
         {
             return $"Name: {Name}, Balance: {Balance}";
         }
+
+        public static Account operator +(Account lhs, Account rhs)
+        {
+            return new Account(lhs.Name + " " + rhs.Name, lhs.Balance + rhs.Balance);
+        }
     }
 }

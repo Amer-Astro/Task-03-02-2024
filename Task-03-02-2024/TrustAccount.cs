@@ -6,9 +6,12 @@ internal class TrustAccount : Account
 
     public int WithdrawCount { get; set; }
 
+    public int WithdrawYear { get; set; }
+
     public TrustAccount(string Name = "Unnamed Account", double Balance = 0.0, double IntRate = 0.0) : base(Name, Balance)
     {
         this.IntRate = IntRate;
+        WithdrawYear = DateTime.Now.Year;
         WithdrawCount = 0;
     }
 
@@ -29,6 +32,12 @@ internal class TrustAccount : Account
 
     public override bool Withdraw(double amount)
     {
+        if (WithdrawYear == WithdrawYear + 1)
+        {
+            WithdrawYear = WithdrawYear + 1;
+            WithdrawCount = 0;
+        }
+
         if (amount <= Balance/5 && WithdrawCount < 4)
         {
             Balance -= amount;
