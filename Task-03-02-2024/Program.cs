@@ -17,7 +17,7 @@ public class Program
         AccountUtil.Withdraw(accounts, 2000);
 
         // Savings
-        Account savAccounts = new List<SavingsAccount>();
+        var savAccounts = new List<Account>();
         savAccounts.Add(new SavingsAccount());
         savAccounts.Add(new SavingsAccount("Superman"));
         savAccounts.Add(new SavingsAccount("Batman", 2000));
@@ -28,7 +28,7 @@ public class Program
         AccountUtil.Withdraw(savAccounts, 2000);
 
         // Checking
-        Account checAccounts = new List<CheckingAccount>();
+        var checAccounts = new List<Account>();
         checAccounts.Add(new CheckingAccount());
         checAccounts.Add(new CheckingAccount("Larry2"));
         checAccounts.Add(new CheckingAccount("Moe2", 2000));
@@ -40,7 +40,7 @@ public class Program
         AccountUtil.Withdraw(checAccounts, 2000);
 
         // Trust
-        Account trustAccounts = new List<TrustAccount>();
+        var trustAccounts = new List<Account>();
         trustAccounts.Add(new TrustAccount());
         trustAccounts.Add(new TrustAccount("Superman2"));
         trustAccounts.Add(new TrustAccount("Batman2", 2000));
