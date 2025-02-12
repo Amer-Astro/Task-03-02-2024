@@ -7,20 +7,20 @@ namespace Exception_Handling
         static void Main(string[] args)
         {
 
-            //Exeption1();
+            //Exception1();
 
-            //Exeption2();
+            //Exception2();
 
         }
 
-        static void Exeption1()
+        static void Exception1()
         {
-            Console.Write($"Enter Array lenth: ");
-            int arrayLingh = int.Parse(Console.ReadLine());
+            Console.Write($"Enter Array length: ");
+            int arraylength = int.Parse(Console.ReadLine());
 
-            int[] array = new int[arrayLingh];
+            int[] array = new int[arraylength];
 
-            for (int i = 0; i < arrayLingh; i++)
+            for (int i = 0; i < arraylength; i++)
             {
                 Console.Write($"Enter index number {i + 1}: ");
                 int index = int.Parse(Console.ReadLine());
@@ -40,7 +40,7 @@ namespace Exception_Handling
             }
         }
 
-        static void Exeption2()
+        static void Exception2()
         {
             char[] vowels = { 'a', 'e', 'i', 'o', 'u' };
 
@@ -48,7 +48,7 @@ namespace Exception_Handling
 
             string input = Console.ReadLine();
 
-            for (int i = 0; input.Length >= i; i++) 
+            for (int i = 0; i < input.Length; i++) 
             {
                 if (vowels.Contains(input[i]))
                 {
